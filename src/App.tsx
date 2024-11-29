@@ -1,7 +1,7 @@
 export default function App() {
     return (
-        <>
-            <p className="text-3xl">Mortgage APP</p>
-        </>
+        <main className="font-primary">
+            <h1 className="text-3xl text-slate-900">Mortgage APP</h1>
+        </main>
     );
 }
