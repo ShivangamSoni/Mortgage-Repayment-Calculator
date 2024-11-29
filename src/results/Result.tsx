@@ -1,4 +1,9 @@
-export default function Result() {
+export type ResultData = {
+    monthly: number;
+    total: number;
+};
+
+export default function Result({ monthly, total }: ResultData) {
     return (
         <div className="h-full flex flex-col gap-4 md:gap-6">
             <h2 className="text-2xl md:text-3xl font-bold">Your results</h2>
@@ -13,7 +18,7 @@ export default function Result() {
                         Your monthly repayments
                     </span>
                     <span className="text-primary-lime font-semibold text-4xl md:text-6xl">
-                        £1,797.74
+                        £{monthly.toFixed(2)}
                     </span>
                 </div>
                 <div className="grid gap-2 mt-4 md:mt-8 pt-4 md:pt-8">
@@ -21,7 +26,7 @@ export default function Result() {
                         Total you'll repay over the term
                     </span>
                     <span className="font-semibold text-xl md:text-2xl">
-                        £539,322.94
+                        £{total.toFixed(2)}
                     </span>
                 </div>
             </div>
